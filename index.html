@@ -1,0 +1,1316 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--------------------------------------------------------------------------------------------->
+    <!--links-->
+    <link rel="stylesheet" href="./src/style.css" />
+    <!--icons-->
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css
+"
+      rel="stylesheet"
+    />
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Science+Gothic:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Swipper-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <!--------------------------------------------------------------------------------------------->
+    <link
+      rel="icon"
+      href="./assets/icons/icon/stethoscope-line.svg"
+      type="image/svg+xml"
+    />
+    <title>Insove</title>
+  </head>
+  <body class="bg-sky-100 text-black flex-col flex">
+    <!--Header-->
+    <header
+      class="w-full h-[15%] flex flex-col bg-white items-center justify-center"
+    >
+      <div class="w-[80%] flex items-center justify-between bg-white py-3 z-2">
+        <div class="lg:hidden">
+          <i
+            id="menu"
+            class="ri-menu-unfold-fill cursor-pointer text-sky-600 font-extrabold text-2xl z-2"
+          ></i>
+        </div>
+        <div class="flex items-center">
+          <img src="./assets/img/header/logo.svg" alt="logo" class="" />
+        </div>
+
+        <div class="flex items-center gap-6">
+          <div class="location hidden lg:flex lg:items-center lg:flex-row">
+            <i class="ri-map-pin-line cursor-pointer mr-1 text-sky-700"></i>
+            <p class="text-gray-500 text-xs">43 Mokattam, Cairo, Egypt</p>
+          </div>
+          <div class="phone hidden lg:flex lg:items-center lg:flex-row">
+            <i class="ri-phone-line mr-1 cursor-pointer text-sky-700"></i>
+            <p class="text-gray-500 text-xs">(20)0114-6255-319</p>
+          </div>
+          <button class="btn btn-gradient btn-accent" id="booknow-header">
+            BOOK NOW
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="items-center justify-between gap-2.5 w-[80%] bg-white py-3 hidden lg:flex"
+      >
+        <div class="left flex items-center gap-4 justify-between p-1">
+          <a href="#home" class="text-sky-600 text-sm hover:text-sky-900"
+            >HOME</a
+          >
+          <a href="#doctors" class="text-sky-600 text-sm hover:text-sky-900"
+            >DOCTORS</a
+          >
+          <a href="#departments" class="text-sky-600 text-sm hover:text-sky-900"
+            >DEPARTMENTS</a
+          >
+          <a href="#services" class="text-sky-600 text-sm hover:text-sky-900"
+            >SERVICES</a
+          >
+          <a href="#blog" class="text-sky-600 text-sm hover:text-sky-900"
+            >BLOG</a
+          >
+          <a href="#contact" class="text-sky-600 text-sm hover:text-sky-900"
+            >CONTACT</a
+          >
+        </div>
+        <div class="right flex items-center mr-3">
+          <i class="ri-search-ai-line mr-1 text-sky-600"></i>
+          <input
+            placeholder="Search"
+            class="text-xs border-2 rounded-sm p-0.75 border-sky-100"
+          />
+        </div>
+      </div>
+
+      <div
+        id="mobilemenu"
+        class="fixed top-0 left-0 w-[25%] h-screen flex-col flex items-center justify-center gap-10 text-2xl bg-white -translate-x-full transition-transform duration-700 ease-in-out z-50"
+      >
+        <div class="mb-15">
+          <i
+            class="ri-close-circle-line cursor-pointer text-sky-700 hover:text-red-700"
+            id="closeBTN"
+          ></i>
+        </div>
+
+        <a href="#home" class="text-sky-600 text-base hover:text-sky-900"
+          >HOME</a
+        >
+        <a href="#doctors" class="text-sky-600 text-base hover:text-sky-900"
+          >DOCTORS</a
+        >
+        <a href="#departments" class="text-sky-600 text-base hover:text-sky-900"
+          >DEPARTMENTS</a
+        >
+        <a href="#services" class="text-sky-600 text-base hover:text-sky-900"
+          >SERVICES</a
+        >
+        <a href="#blog" class="text-sky-600 text-base hover:text-sky-900"
+          >BLOG</a
+        >
+        <a href="#contact" class="text-sky-600 text-base hover:text-sky-900"
+          >CONTACT</a
+        >
+
+        <div class="flex items-center flex-col gap-5">
+          <div class="flex items-center flex-col">
+            <i
+              class="ri-map-pin-line cursor-pointer mr-1 text-base text-sky-700"
+            ></i>
+            <p class="text-gray-500 text-[10px]">43 Mokattam, Cairo, Egypt</p>
+          </div>
+          <div class="flex items-center flex-col">
+            <i
+              class="ri-phone-line mr-1 cursor-pointer text-base text-sky-700"
+            ></i>
+            <p class="text-gray-500 text-xs">(20)0114-6255-319</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--end of header-->
+
+    <!--main-->
+    <main class="flex items-center justify-center flex-col w-full">
+      <!--home section-->
+      <section
+        id="home"
+        class="h-[95vh] flex flex-col items-center justify-start"
+      >
+        <div class="bg-sky-100 flex flex-row items-center justify-evenly p-4">
+          <div class="w-[40%] items-center flex flex-col">
+            <div
+              class="bg-sky-50 lg:w-[50%] shadow-3xl rounded-full mb-5 p-2 lg:p-1 flex items-center justify-center"
+            >
+              <i
+                class="ri-heart-pulse-fill mr-2 text-sm lg:text-xl lg:mr-5 text-sky-600"
+              ></i>
+              <p class="text-sky-900 font-semibold lg:font-bold">
+                LIVE YOUR LIFE
+              </p>
+            </div>
+
+            <h1 class="font-bold text-center text-sm lg:text-xl">
+              WE CARE ABOUT YOUR HEALTH
+            </h1>
+            <p class="text-center text-sky-800 mb-5">
+              INSOVE is a place where you will fell like home in our hospital we
+              offer to you some of the best doctors in the field to take care of
+              you and your family
+            </p>
+            <button class="btn btn-gradient btn-accent" id="contact-home">
+              CONTACT US
+            </button>
+          </div>
+
+          <div class="lg:w-[40%] w-[60%] h-[80%] lg:h-[90%]">
+            <img
+              src="./assets/img/hero/img.png"
+              alt="hero image"
+              class="w-full h-full"
+            />
+          </div>
+        </div>
+
+        <div
+          class="bg-sky-50 w-full h-30 lg:h-37.5 px-7 py-2 lg:px-15 lg:py-4 flex items-center mt-3 justify-between"
+        >
+          <div class="flex flex-col text-center items-center justify-center">
+            <h1 class="text-sky-800 font-extrabold text-xl lg:text-3xl">
+              +5120
+            </h1>
+            <span class="text-sky-600 font-semibold text-sm lg:text-lg"
+              >Happy Patients</span
+            >
+          </div>
+          <div class="flex flex-col text-center items-center justify-center">
+            <h1 class="text-sky-800 font-extrabold text-xl lg:text-3xl">+26</h1>
+            <span class="text-sky-600 font-semibold text-sm lg:text-lg"
+              >Total Branches</span
+            >
+          </div>
+          <div class="flex flex-col text-center items-center justify-center">
+            <h1 class="text-sky-800 font-extrabold text-xl lg:text-3xl">+53</h1>
+            <span class="text-sky-600 font-semibold text-sm lg:text-lg"
+              >Senior Doctors</span
+            >
+          </div>
+          <div class="flex flex-col text-center items-center justify-center">
+            <h1 class="text-sky-800 font-extrabold text-xl lg:text-3xl">+10</h1>
+            <span class="text-sky-600 font-semibold text-sm lg:text-lg"
+              >Years Experience</span
+            >
+          </div>
+        </div>
+      </section>
+      <!--end of home section-->
+
+      <!--services-->
+      <!--remain the responsive-->
+      <section
+        id="services"
+        class="h-[30vh] rounded-xl shadow-2xl mb-12 w-[90%] flex py-5 px-3 flex-col bg-sky-100 justify-start"
+      >
+        <div class="flex justify-between text-center">
+          <h1 class="font-extrabold text-sky-900">
+            Our Best Services For Your Solution
+          </h1>
+          <p class="text-sky-900 font-semibold">
+            Provides general practice and outpatient clinics, emergency care,
+            and specialized clinics like cardiology, pediatrics, and
+            orthopedics.
+          </p>
+        </div>
+
+        <div
+          class="z-10 mt-5 w-full gap-5 hidden items-center justify-between lg:flex"
+        >
+          <div
+            class="bg-sky-50 hover:scale-105 duration-900 shadow-2xl items-center justify-between rounded-xl p-3 flex flex-col"
+          >
+            <img
+              src="./assets/icons/services/icon-1.svg"
+              alt="icon"
+              class="w-8.75 h-8.75"
+            />
+            <h1 class="font-bold text-sky-800 text-center">
+              General Practitioners
+            </h1>
+            <p class="text-center">
+              General Practitioners are doctors who provide primary care,
+              treating common illnesses and managing overall patient health.
+            </p>
+          </div>
+
+          <div
+            class="bg-sky-50 hover:scale-105 duration-900 shadow-2xl items-center justify-between rounded-xl p-3 flex flex-col"
+          >
+            <img
+              src="./assets/icons/services/icon-2.svg"
+              alt="icon"
+              class="w-8.75 h-8.75"
+            />
+            <h1 class="font-bold text-sky-800 text-center">
+              Pregnancy Support
+            </h1>
+            <p class="text-center">
+              Pregnancy Support provides medical care, guidance, and monitoring
+              to ensure the health and well-being of both mother and baby
+              throughout pregnancy.
+            </p>
+          </div>
+
+          <div
+            class="bg-sky-50 hover:scale-105 duration-900 shadow-2xl items-center justify-between rounded-xl p-3 flex flex-col"
+          >
+            <img
+              src="./assets/icons/services/icon-3.svg"
+              alt="icon"
+              class="w-8.75 h-8.75"
+            />
+            <h1 class="font-bold text-sky-800 text-center">
+              Nutritional Support
+            </h1>
+            <p class="text-center">
+              Nutritional Support provides guidance and plans to ensure proper
+              diet, improve health, and meet specific medical or wellness needs.
+            </p>
+          </div>
+
+          <div
+            class="bg-sky-50 hover:scale-105 duration-900 shadow-2xl items-center justify-between rounded-xl p-3 flex flex-col"
+          >
+            <img
+              src="./assets/icons/services/icon-4.svg"
+              alt="icon"
+              class="w-8.75 h-8.75"
+            />
+            <h1 class="font-bold text-sky-800 text-center">
+              Pharmaceutical Care
+            </h1>
+            <p class="text-center">
+              Pharmaceutical Care involves managing and dispensing medications,
+              advising patients on safe and effective use, and ensuring optimal
+              therapeutic outcomes.
+            </p>
+          </div>
+        </div>
+
+        <div class="w-full mt-2 lg:hidden shadow-xl rounded-2xl">
+          <div class="swiper servicesSwiper lg:hidden rounded-2xl">
+            <div class="swiper-wrapper bg-sky-50 rouded-2xl">
+              <!-- Slide 1 -->
+              <div class="swiper-slide rounded-2xl">
+                <div
+                  class="bg-sky-50 rounded-2xl p-7 flex flex-col items-center"
+                >
+                  <img
+                    src="./assets/icons/services/icon-1.svg"
+                    alt="icon"
+                    class="w-5 h-5"
+                  />
+                  <h1 class="font-semibold text-sky-800 text-center mt-2">
+                    General Practitioners
+                  </h1>
+                  <p class="text-center text-xs mt-1">
+                    General Practitioners are doctors who provide primary care,
+                    treating common illnesses and managing overall patient
+                    health.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-sky-50 rounded-2xl p-7 flex flex-col items-center"
+                >
+                  <img
+                    src="./assets/icons/services/icon-2.svg"
+                    alt="icon"
+                    class="w-5 h-5"
+                  />
+                  <h1 class="font-semibold text-sky-800 text-center mt-2">
+                    Pregnancy Support
+                  </h1>
+                  <p class="text-center text-xs mt-1">
+                    Pregnancy Support provides medical care, guidance, and
+                    monitoring to ensure the health and well-being of both
+                    mother and baby throughout pregnancy.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-sky-50 rounded-2xl p-7 flex flex-col items-center"
+                >
+                  <img
+                    src="./assets/icons/services/icon-4.svg"
+                    alt="icon"
+                    class="w-5 h-5"
+                  />
+                  <h1 class="font-semibold text-sky-800 text-center mt-2">
+                    Pharmaceutical Care
+                  </h1>
+                  <p class="text-center text-xs mt-1">
+                    Pharmaceutical Care involves managing and dispensing
+                    medications, advising patients on safe and effective use,
+                    and ensuring optimal therapeutic outcomes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination mt-4"></div>
+          </div>
+        </div>
+      </section>
+      <!--end of services section-->
+
+      <!--doctors section-->
+      <section
+        id="doctors"
+        class="w-[60%] mb-5 mt-10 bg-sky-50 flex flex-col p-4 rounded-2xl shadow-2xl"
+      >
+        <h1 class="text-sky-800 font-bold mb-4">Our Team</h1>
+
+        <div class="swiper doctorsSwiper w-[90%] h-[95%]">
+          <div class="swiper-wrapper w-full">
+            <!-- Slide 1 -->
+            <div class="swiper-slide w-full grid grid-rows-2 gap-5">
+              <!-- Doctor 1 -->
+              <div
+                class="flex items-center max-w-[90%] gap-4 mb-2 bg-white p-3 lg:p-4 rounded-lg shadow-md"
+              >
+                <img
+                  src="./assets/img/team/doctor-1.png"
+                  alt="doc"
+                  class="w-24 h-24 rounded-xl object-cover"
+                />
+                <div>
+                  <h2
+                    class="text-sky-800 text-sm lg:text-xl font-extrabold font-mono"
+                  >
+                    DR.Lesile Taylor
+                  </h2>
+                  <h3
+                    class="text-sky-700 font-bold text-xs lg:text-xl font-mono"
+                  >
+                    PEDIATRICIAN
+                  </h3>
+                  <p class="text-gray-500 text-xs lg:text-sm">
+                    Provides medical care for infants, children, and adolescents
+                    to ensure healthy growth and development.
+                  </p>
+                  <ul class="flex gap-2 mt-2">
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-facebook-fill"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-instagram-line"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-whatsapp-line"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-twitter-x-line"></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Doctor 2 -->
+              <div
+                class="flex items-center gap-4 max-w-[90%] bg-white p-3 lg:p-4 rounded-lg shadow-md"
+              >
+                <img
+                  src="./assets/img/team/doctor-2.png"
+                  alt="doc"
+                  class="w-24 h-24 rounded-xl object-cover"
+                />
+                <div>
+                  <h2
+                    class="text-sky-800 text-sm lg:text-xl font-extrabold font-mono"
+                  >
+                    DR.Magdy
+                  </h2>
+                  <h3
+                    class="text-sky-700 text-sm lg:text-xl font-bold font-mono"
+                  >
+                    CARDIOLOGIST
+                  </h3>
+                  <p class="text-gray-500 text-xs lg:text-sm">
+                    Diagnoses and treats conditions related to the heart and
+                    blood vessels for improved cardiovascular health.
+                  </p>
+                  <ul class="flex gap-2 mt-2">
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-facebook-fill"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-instagram-line"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-whatsapp-line"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-twitter-x-line"></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide w-full grid grid-rows-2 gap-5">
+              <!-- Doctor 3 -->
+              <div
+                class="flex items-center max-w-[90%] gap-4 mb-2 bg-white p-3 lg:p-4 rounded-lg shadow-md"
+              >
+                <img
+                  src="./assets/img/team/doc3.jpg"
+                  alt="doc"
+                  class="w-24 h-24 rounded-xl object-cover"
+                />
+                <div>
+                  <h2
+                    class="text-sky-800 text-sm lg:text-xl font-extrabold font-mono"
+                  >
+                    DR.Peter Maikel
+                  </h2>
+                  <h3
+                    class="text-sky-700 text-xs lg:text-xl font-bold font-mono"
+                  >
+                    DERMATOLOGIST
+                  </h3>
+                  <p class="text-gray-500 text-xs lg:text-sm">
+                    Treats medical conditions affecting the skin, hair, and
+                    nails to maintain overall skin health.
+                  </p>
+                  <ul class="flex gap-2 mt-2">
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-facebook-fill"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-instagram-line"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-whatsapp-line"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-twitter-x-line"></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Doctor 4 -->
+              <div
+                class="flex items-center max-w-[90%] gap-4 bg-white p-3 lg:p-4 rounded-lg shadow-md"
+              >
+                <img
+                  src="./assets/img/team/doc4.jpg"
+                  alt="doc"
+                  class="w-24 h-24 rounded-xl object-cover"
+                />
+                <div>
+                  <h2
+                    class="text-sky-800 font-extrabold text-sm lg:text-xl font-mono"
+                  >
+                    DR.Ann
+                  </h2>
+                  <h3
+                    class="text-sky-700 font-bold text-sm lg:text-xl font-mono"
+                  >
+                    NEUROLOGIST
+                  </h3>
+                  <p class="text-gray-500 text-xs lg:text-sm">
+                    Specializes in diagnosing and treating disorders of the
+                    brain and nervous system functions
+                  </p>
+                  <ul class="flex gap-2 mt-2">
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-facebook-fill"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-instagram-line"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-whatsapp-line"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-twitter-x-line"></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide w-full grid grid-rows-2 gap-5">
+              <!-- Doctor 5 -->
+              <div
+                class="flex items-center max-w-[90%] gap-4 mb-2 bg-white p-3 lg:p-4 rounded-lg shadow-md"
+              >
+                <img
+                  src="./assets/img/team/doc5.jpg"
+                  alt="doc"
+                  class="w-24 h-24 rounded-xl object-cover"
+                />
+                <div>
+                  <h2
+                    class="text-sky-800 text-sm lg:text-xl font-extrabold font-mono"
+                  >
+                    DR.Sarah Taylor
+                  </h2>
+                  <h3
+                    class="text-sky-700 text-sm lg:text-xl font-bold font-mono"
+                  >
+                    ORTHOPEDIC SURGEON
+                  </h3>
+                  <p class="text-gray-500 text-xs lg:text-sm">
+                    Treats injuries and diseases affecting bones, joints, and
+                    muscles of the body.
+                  </p>
+                  <ul class="flex gap-2 mt-2">
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-facebook-fill"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-instagram-line"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-whatsapp-line"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-twitter-x-line"></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Doctor 6 -->
+              <div
+                class="flex items-center max-w-[90%] gap-4 bg-white p-3 lg:p-4 rounded-lg shadow-md"
+              >
+                <img
+                  src="./assets/img/team/doc6.jpg"
+                  alt="doc"
+                  class="w-24 h-24 rounded-xl object-cover"
+                />
+                <div>
+                  <h2
+                    class="text-sky-800 text-sm lg:text-xl font-extrabold font-mono"
+                  >
+                    DR.Leonardo
+                  </h2>
+                  <h3
+                    class="text-sky-700 text-sm lg:text-xl font-bold font-mono"
+                  >
+                    GYNEOLOGIST
+                  </h3>
+                  <p class="text-gray-500 text-xs lg:text-sm">
+                    Focuses on diagnosing and treating women's reproductive
+                    health conditions and medical needs.
+                  </p>
+                  <ul class="flex gap-2 mt-2">
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-facebook-fill"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-instagram-line"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-whatsapp-line"></i>
+                    </li>
+                    <li
+                      class="hover:scale-140 transition-transform duration-500"
+                    >
+                      <i class="ri-twitter-x-line"></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="doctors-pagination mt-4"></div>
+        </div>
+      </section>
+      <!--end of doctors section-->
+
+      <!--contact form-->
+      <section
+        id="contact"
+        class="rounded-xl mt-8 shadow-2xl mb-10 w-[90%] flex bg-sky-50 flex-col justify-start"
+      >
+        <div
+          class="w-full rounded-lg bg-transparent shadow-base-300/20 text-sky-800 shadow-sm"
+        >
+          <div class="w-full p-4">
+            <form class="needs-validation peer grid gap-y-4" novalidate>
+              <!-- Account Details -->
+              <div class="w-full">
+                <h6 class="text-lg font-semibold">BOOK NOW</h6>
+              </div>
+              <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div>
+                  <label
+                    class="label-text font-bold text-sky-800"
+                    for="firstName"
+                    >First Name
+                  </label>
+                  <input
+                    id="firstName"
+                    type="text"
+                    placeholder="Sayed"
+                    class="input bg-sky-100 placeholder-sky-900 text-sky-900"
+                    required
+                  />
+                  <span class="error-message">Please enter your name.</span>
+                  <span class="success-message">Looks good!</span>
+                </div>
+                <div>
+                  <label
+                    class="label-text font-bold text-sky-800"
+                    for="lastName"
+                    >Last Name</label
+                  >
+                  <input
+                    id="lastName"
+                    type="text"
+                    placeholder="Mohamed"
+                    class="input bg-sky-100 placeholder-sky-900 text-sky-900"
+                    required
+                  />
+                  <span class="error-message"
+                    >Please enter your last name.</span
+                  >
+                  <span class="success-message">Looks good!</span>
+                </div>
+              </div>
+              <!-- Email and password -->
+              <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div>
+                  <label
+                    class="label-text font-bold text-sky-800"
+                    for="userEmail"
+                    >Email</label
+                  >
+                  <input
+                    id="userEmail"
+                    type="email"
+                    class="input bg-sky-100 placeholder-sky-900 text-sky-900"
+                    placeholder="sayed@gmail.com"
+                    aria-label="sayed@gmail.com"
+                    required=""
+                  />
+                  <span class="error-message">Please enter a valid email</span>
+                  <span class="success-message">Looks good!</span>
+                </div>
+
+                <div>
+                  <label class="label-text font-bold text-sky-800" for="jsPickr"
+                    >DOB</label
+                  >
+                  <input
+                    id="jsPickr"
+                    type="text"
+                    class="input bg-sky-100 placeholder-sky-900 text-sky-900"
+                    placeholder="YYYY-MM-DD"
+                    id="jsPickr"
+                    required
+                  />
+                  <span class="error-message">Please select your DOB</span>
+                  <span class="success-message">Looks good!</span>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div>
+                  <div class="label-text text-sky-800">Gender</div>
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      id="male"
+                      name="radio-0"
+                      class="radio radio-primary bg-sky-100 placeholder-sky-900 text-sky-900"
+                      required
+                    />
+                    <label class="label-text text-base text-sky-900" for="male"
+                      >Male</label
+                    >
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      id="female"
+                      name="radio-0"
+                      class="radio radio-primary bg-sky-100 placeholder-sky-900 text-sky-900"
+                      required
+                    />
+                    <label
+                      class="label-text text-base text-sky-900"
+                      for="female"
+                      >Female</label
+                    >
+                  </div>
+                  <span class="error-message">Please select your Gender</span>
+                  <span class="success-message">Looks good!</span>
+                </div>
+              </div>
+              <div class="w-full">
+                <label class="label-text font-bold text-sky-800" for="userBio"
+                  >Please describe your condition and phone number to call
+                  you.</label
+                >
+                <textarea
+                  class="textarea min-h-20 resize-none bg-sky-100 placeholder-sky-900 text-sky-900"
+                  id="userBio"
+                  placeholder="Fell free to message us"
+                  required=""
+                ></textarea>
+                <span class="error-message">Please write few words</span>
+                <span class="success-message">Looks good!</span>
+              </div>
+
+              <!-- Submit button -->
+              <div class="mt-4">
+                <button
+                  type="submit"
+                  name="submitButton"
+                  class="btn btn-gradient btn-accent"
+                >
+                  CONTACT US
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!--end of contact form-->
+
+      <!--testimonials-->
+      <section
+        id="testimonials"
+        class="w-full h-90 bg-cover bg-center items-center flex justify-between mb-10"
+        style="background-image: url(./assets/img/testimonials/bg.svg)"
+      >
+        <div class="w-[50%] left-0 h-full bg-cover">
+          <img
+            src="./assets/img/testimonials/img.png"
+            alt="img"
+            class="w-full h-full object-fit"
+          />
+        </div>
+        <div class="w-[50%] items-center justify-center">
+          <div class="swiper w-full max-w-2xl rounded-lg h-60">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide w-[90%] text-center mt-10">
+                <h2 class="mb-2 font-bold text-sky-800">"john"</h2>
+                <p
+                  class="text-center text-sky-950 font-semibold text-xs md:text-sm lg:text-lg"
+                >
+                  Overall, I would rate 5 out of 5. Their combination of
+                  professionalism, empathy, and efficient service made my visit
+                  stress-free. I would highly recommend this hospital to anyone
+                  seeking quality healthcare and excellent patient care.
+                </p>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide w-[90%] text-center mt-10">
+                <h2 class="mb-2 font-bold text-sky-800">"Maikel"</h2>
+
+                <p
+                  class="text-center text-sky-950 font-semibold text-xs md:text-sm lg:text-lg"
+                >
+                  I recently visited and I must say the experience was
+                  excellent. The staff were friendly, professional, and
+                  attentive from the moment I arrived. The reception process was
+                  smooth and I didn’t have to wait long for my appointment.
+                </p>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide w-[90%] text-center mt-9">
+                <h2 class="mb-2 font-bold text-sky-800">"Mia"</h2>
+                <p
+                  class="text-center text-sky-950 font-semibold text-xs md:text-sm lg:text-lg"
+                >
+                  The medical team, including doctors and nurses, demonstrated
+                  great knowledge and patience. They took the time to explain my
+                  condition, answer all my questions, and ensure I was
+                  comfortable with the treatment plan. The facilities were
+                  clean, modern, and well-organized, which added to my
+                  confidence in the care I received.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!--end of testimonials-->
+
+      <!--answers section-->
+      <section
+        id="answers"
+        class="w-[85%] shadow-2xl bg-sky-50 h-auto mb-10 rounded-3xl"
+      >
+        <div class="accordion divide-neutral/20 divide-y">
+          <h1 class="text-center font-extrabold text-2xl p-2 text-sky-950">
+            We've got answers
+          </h1>
+          <div class="accordion-item" id="payment-icon">
+            <button
+              class="accordion-toggle inline-flex items-center justify-between text-center"
+            >
+              <span class="inline-flex items-center gap-x-4 text-sky-900">
+                What specialties does your hospital offer?
+              </span>
+              <span><i class="ri-question-answer-line text-sky-900"></i></span>
+            </button>
+            <div
+              id="payment-icon-collapse"
+              class="accordion-content w-full overflow-hidden transition-[height] duration-300"
+              aria-labelledby="payment-icon"
+              role="region"
+            >
+              <div class="px-5 pb-4 items-center hidden" id="para">
+                <p class="font-semibold text-gray-500">
+                  Our hospital provides a wide range of specialties, including
+                  Pediatrics, Cardiology, Dermatology, Neurology, Orthopedics,
+                  Gynecology, and more. We have expert doctors in every
+                  department to ensure comprehensive care
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" id="payment-icon">
+            <button
+              class="accordion-toggle inline-flex items-center justify-between text-center"
+            >
+              <span class="inline-flex items-center gap-x-4 text-sky-900">
+                How can I book an appointment with a doctor?
+              </span>
+              <span><i class="ri-file-marked-line text-sky-900"></i></span>
+            </button>
+            <div
+              id="payment-icon-collapse"
+              class="accordion-content w-full overflow-hidden transition-[height] duration-300"
+              aria-labelledby="payment-icon"
+              role="region"
+            >
+              <div class="px-5 pb-4 items-center hidden" id="para">
+                <p class="font-semibold text-gray-500">
+                  You can book an appointment by calling our reception, using
+                  our online booking system, or through our hospital mobile app.
+                  We offer flexible timings to accommodate your schedule.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" id="payment-icon">
+            <button
+              class="accordion-toggle inline-flex items-center justify-between text-center"
+            >
+              <span class="inline-flex items-center gap-x-4 text-sky-900">
+                What services are available for children?
+              </span>
+              <span><i class="ri-cookie-line text-sky-900"></i></span>
+            </button>
+            <div
+              id="payment-icon-collapse"
+              class="accordion-content w-full overflow-hidden transition-[height] duration-300"
+              aria-labelledby="payment-icon"
+              role="region"
+            >
+              <div class="px-5 pb-4 items-center hidden" id="para">
+                <p class="font-semibold text-gray-500">
+                  Our Pediatric department treats infants, children, and
+                  adolescents. Services include routine check-ups, vaccinations,
+                  treatment for acute illnesses, and long-term care for chronic
+                  conditions.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" id="payment-icon">
+            <button
+              class="accordion-toggle inline-flex items-center justify-between text-center"
+            >
+              <span class="inline-flex items-center gap-x-4 text-sky-900">
+                Are your doctors certified and experienced?
+              </span>
+              <span><i class="ri-verified-badge-line text-sky-900"></i></span>
+            </button>
+            <div
+              id="payment-icon-collapse"
+              class="accordion-content w-full overflow-hidden transition-[height] duration-300"
+              aria-labelledby="payment-icon"
+              role="region"
+            >
+              <div class="px-5 pb-4 items-center hidden" id="para">
+                <p class="font-semibold text-gray-500">
+                  All our doctors are board-certified in their specialties, with
+                  years of experience. They undergo continuous training to stay
+                  updated with the latest medical practices
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" id="payment-icon">
+            <button
+              class="accordion-toggle inline-flex items-center justify-between text-center"
+            >
+              <span class="inline-flex items-center gap-x-4 text-sky-900">
+                Does the hospital provide emergency services?
+              </span>
+              <span
+                ><i class="ri-calendar-schedule-line text-sky-900"></i
+              ></span>
+            </button>
+            <div
+              id="payment-icon-collapse"
+              class="accordion-content w-full overflow-hidden transition-[height] duration-300"
+              aria-labelledby="payment-icon"
+              role="region"
+            >
+              <div class="px-5 pb-4 items-center hidden" id="para">
+                <p class="font-semibold text-gray-500">
+                  Yes, we have a 24/7 Emergency Department staffed with
+                  experienced doctors and nurses to handle urgent medical
+                  conditions and accidents.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" id="payment-icon">
+            <button
+              class="accordion-toggle inline-flex items-center justify-between text-center"
+            >
+              <span class="inline-flex items-center gap-x-4 text-sky-900">
+                How does the hospital ensure patient safety?
+              </span>
+              <span><i class="ri-shield-user-line text-sky-900"></i></span>
+            </button>
+            <div
+              id="payment-icon-collapse"
+              class="accordion-content w-full overflow-hidden transition-[height] duration-300"
+              aria-labelledby="payment-icon"
+              role="region"
+            >
+              <div class="px-5 pb-4 items-center hidden" id="para">
+                <p class="font-semibold text-gray-500">
+                  Patient safety is our top priority. We follow strict hygiene
+                  protocols, use state-of-the-art equipment, conduct regular
+                  staff training, and maintain transparent communication with
+                  patients
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end of answers section-->
+
+      <!--departments section-->
+      <section
+        id="departments"
+        class="bg-sky-100 p-7 mb-10 rounded-2xl shadow-2xl w-[90%] h-[60vh] flex items-center justify-evenly"
+      >
+        <div class="w-[20%] h-full">
+          <ul class="items-center flex flex-col justify-between h-full">
+            <li
+              id="laboratory"
+              class="dep-item text-sky-800 text-center text-xs lg:text-lg hover:text-sky-950 font-extrabold cursor-pointer"
+            >
+              LABORATORY ANALYSIS
+            </li>
+            <li
+              id="cardoiology"
+              class="dep-item text-sky-800 text-center text-xs lg:text-lg hover:text-sky-950 font-extrabold cursor-pointer"
+            >
+              CARDOIOLOGY CLINIC
+            </li>
+            <li
+              id="gyneology"
+              class="dep-item text-sky-800 text-center text-xs lg:text-lg hover:text-sky-950 font-extrabold cursor-pointer"
+            >
+              GYNEOLOGY CLINIC
+            </li>
+            <li
+              id="pathology"
+              class="dep-item text-sky-800 text-center text-xs lg:text-lg hover:text-sky-950 font-extrabold cursor-pointer"
+            >
+              PATHOLOGY CLICIN
+            </li>
+            <li
+              id="pedaiatrics"
+              class="dep-item text-sky-800 text-center text-xs lg:text-lg hover:text-sky-950 font-extrabold cursor-pointer"
+            >
+              PEDIATRICS CLINIC
+            </li>
+            <li
+              id="neurology"
+              class="dep-item text-sky-800 text-center text-xs lg:text-lg hover:text-sky-950 font-extrabold cursor-pointer"
+            >
+              NEUROLOGY CLINIC
+            </li>
+          </ul>
+        </div>
+
+        <div
+          id="departments-description"
+          class="w-[60%] lg:w-[70%] h-full justify-evenly flex flex-col gap-5"
+        >
+          <h1 id="dep-title" class="text-2xl font-extrabold text-sky-900">
+            Cardiology Clinic
+          </h1>
+          <p id="dep-p1" class="text-start text-xs text-gray-500 font-semibold">
+            Our Cardiology Clinic is dedicated to the diagnosis, treatment, and
+            prevention of heart and blood vessel diseases using advanced medical
+            technology and evidence-based practices. We provide comprehensive
+            care for a wide range of cardiovascular conditions such as
+            hypertension, coronary artery disease, heart rhythm disorders, and
+            heart failure. Our experienced cardiologists perform detailed
+            evaluations including ECG, echocardiography, stress testing, and
+            other non-invasive procedures to accurately assess each patient’s
+            heart health.
+          </p>
+          <p
+            id="dep-p2"
+            class="text-start text-xs text-gray-500 font-semibold hidden lg:flex"
+          >
+            We focus not only on treating existing heart conditions but also on
+            reducing future risks through personalized treatment plans and
+            lifestyle guidance. Patients receive support in managing cholesterol
+            levels, blood pressure, and other risk factors through medication,
+            nutrition advice, and regular follow-up visits. Our goal is to
+            improve overall cardiovascular wellness and ensure long-term heart
+            health through continuous monitoring.
+          </p>
+          <button class="btn btn-gradient btn-accent" id="gotodoctors">
+            SEE DOCTORS
+          </button>
+        </div>
+      </section>
+      <!-- end of departments section-->
+      <!--blog section-->
+      <section
+        id="blog"
+        class="w-[90%] h-[60vh] flex gap-2 bg-sky-100 p-5 items-center mb-10 flex-col justify-between shadow-2xl rounded-2xl"
+      >
+        <h1 class="text-sky-900 font-bold text-lg lg:text-2xl">
+          Our Recent Posts
+        </h1>
+
+        <div
+          class="w-full h-full p-7 lg:gap-9 flex flex-col lg:flex-row items-center justify-between"
+        >
+          <img
+            src="./assets/img/blog/img-1.png"
+            alt="img"
+            class="w-[90%] h-[30%] lg:w-[85%] lg:h-[85%] object-cover rounded-3xl shadow-2xs hover:scale-110"
+          />
+          <img
+            src="./assets/img/blog/img-2.png"
+            alt="img"
+            class="w-[90%] h-[30%] lg:w-[85%] lg:h-[85%] object-cover rounded-3xl shadow-2xs hover:scale-110"
+          />
+          <img
+            src="./assets/img/blog/img-3.png"
+            alt="img"
+            class="w-[90%] h-[30%] lg:w-[85%] lg:h-[85%] object-cover rounded-3xl shadow-2xs hover:scale-110"
+          />
+        </div>
+      </section>
+      <!--end of blog section-->
+      <!--brands section-->
+      <section id="brands" class="w-full h-[15vh] mt-5 mb-10 hidden lg:flex">
+        <div class="w-full h-full flex items-center gap-10 justify-center">
+          <img
+            src="./assets/img/brands/brand-2.svg"
+            alt="brand"
+            class="w-[15%] h-full"
+          />
+          <img
+            src="./assets/img/brands/brand-1.svg"
+            alt="brand"
+            class="w-[15%] h-full"
+          />
+          <img
+            src="./assets/img/brands/brand-3.svg"
+            alt="brand"
+            class="w-[15%] h-full"
+          />
+          <img
+            src="./assets/img/brands/brand-4.svg"
+            alt="brand"
+            class="w-[15%] h-full"
+          />
+          <img
+            src="./assets/img/brands/brand-5.svg"
+            alt="brand"
+            class="w-[15%] h-full"
+          />
+        </div>
+      </section>
+      <!--end of brands section-->
+    </main>
+
+    <!--end of main-->
+
+    <!--footer-->
+    <footer
+      class="w-full h-[25vh] flex bg-sky-100 items-center justify-between p-5 gap-5"
+    >
+      <div
+        class="flex h-full w-[25%] lg:w-[30%] justify-evenly items-center flex-col"
+      >
+        <img src="./assets/img/header/logo.svg" alt="logo" />
+      </div>
+      <div
+        class="flex h-full w-[25%] lg:w-[30%] justify-evenly gap-2 items-center"
+      >
+        <div class="flex flex-col items-center justify-center">
+          <a
+            class="text-sky-700 text-xs lg:text-lg hover:text-sky-950 font-bold"
+            href="#home"
+            >HOME</a
+          >
+          <a
+            class="text-sky-700 text-xs lg:text-lg hover:text-sky-950 font-bold"
+            href="#services"
+            >SERVICES</a
+          >
+          <a
+            class="text-sky-700 text-xs lg:text-lg hover:text-sky-950 font-bold"
+            href="#doctors"
+            >DOCTORS</a
+          >
+          <a
+            class="text-sky-700 text-xs lg:text-lg hover:text-sky-950 font-bold"
+            href="contact"
+            >BOOK</a
+          >
+        </div>
+        <div class="flex flex-col items-center justify-center">
+          <a
+            class="text-sky-700 text-xs lg:text-lg hover:text-sky-950 font-bold"
+            href="#testimonials"
+            >RATING</a
+          >
+          <a
+            class="text-sky-700 text-xs lg:text-lg hover:text-sky-950 font-bold"
+            href="#answers"
+            >ANSWERS</a
+          >
+          <a
+            class="text-sky-700 text-xs lg:text-lg hover:text-sky-950 font-bold"
+            href="#departments"
+            >DEPARTMENTS</a
+          >
+          <a
+            class="text-sky-700 text-xs lg:text-lg hover:text-sky-950 font-bold"
+            href="#blog"
+            >BLOG</a
+          >
+        </div>
+      </div>
+      <div
+        class="flex h-full w-[25%] lg:w-[30%] flex-col justify-center items-center"
+      >
+        <p class="text-sky-700 text-center font-bold mb-2 text-xs lg:text-lg">
+          In insove we beleive that we can be a family for you not only a
+          hospital and doctors and we will make our best to make you fell good
+          again
+        </p>
+        <ul class="flex gap-2 mt-2">
+          <li class="hover:scale-140 transition-transform duration-500">
+            <i class="ri-facebook-fill"></i>
+          </li>
+          <li class="hover:scale-140 transition-transform duration-500">
+            <i class="ri-instagram-line"></i>
+          </li>
+          <li class="hover:scale-140 transition-transform duration-500">
+            <i class="ri-whatsapp-line"></i>
+          </li>
+          <li class="hover:scale-140 transition-transform duration-500">
+            <i class="ri-twitter-x-line"></i>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- end of footer-->
+    <!--------------------------------------------------------------------------------------------->
+    <!--scripts-->
+    <script src="../node_modules/flyonui/flyonui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./src/main.js"></script>
+
+    <!--------------------------------------------------------------------------------------------->
+  </body>
+</html>
